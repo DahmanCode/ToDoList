@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
 
 :root {
-  --primary-color: #f8e0ff;
+  --primary-color: #fcf3ff;
   --primary-color-darker: #070518;
   --secondary-color: #00e3e7;
   --secondary-color-darker: #d8d8ff;
 
-  --text-color: #dbdbdb;
+  --text-color: #e9e9e9;
   --text-color-darker: #07031f;
 }
 
@@ -19,6 +19,8 @@
 }
 
 body {
+  width: 100%;
+  height: 100vh;
   transition-delay: 1s;
   background-color: var(--secondary-color);
   overflow: hidden;
@@ -30,13 +32,14 @@ body {
 
 .container {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
   position: relative;
+  overflow: hidden;
 }
 
 /* .container.dark {
@@ -112,11 +115,11 @@ body {
 }
 
 .dark .smooth-dark {
-  width: 200vw;
-  height: 200vh;
+  width: 3000px;
+  height: 3000px;
   position: absolute;
-  left: -50vw;
-  top: -50vh;
+  left: -800px;
+  top: -800px;
 }
 
 .todo {
@@ -142,7 +145,7 @@ body {
 }
 
 .dark .todo h2 {
-  /* color: var(--text-color); */
+  color: #000;
 }
 
 .todo h2 img {
@@ -251,4 +254,23 @@ ul li span {
 
 ul li span:hover {
   transform: scale(1.1);
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    /* justify-content: start; */
+    align-items: start;
+    padding-top: 200px;
+  }
+
+  .mode-btn {
+    top: -60px;
+    left: -60px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .todo {
+    width: 95%;
+  }
 }
