@@ -37,3 +37,13 @@ function showData() {
 }
 
 showData()
+
+// Change Mode
+
+const container = document.querySelector('.container')
+const modeBtn = document.getElementById('mode-btn')
+
+modeBtn.addEventListener('click', () => {
+  container.classList.toggle('dark')
+  
+})
